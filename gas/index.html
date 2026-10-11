@@ -20,72 +20,56 @@
   <div class="wrap">
     <p class="eyebrow">Portfolio · Semiconductor Infra · Gas / Chemical</p>
     <h1>반도체 배기가스 처리 공정을<br><span>직접 설계해 본</span> 화학공학 엔지니어 서예진</h1>
-    <p class="lede">SF₆ 회수·정제 공정 설계와 UniSim 모사, FAB 전후공정 실습, 포토·식각 케미컬 취급 경험으로 가스·케미컬 인프라를 맡을 준비를 했습니다.</p>
-    <div class="kpis"><div class="kpi"><b>1.0 → 54.4 vol%</b><small>SF₆ 농축 — 분리막 1단, 중간보고서 기준</small></div><div class="kpi"><b>GWP 25,200</b><small>처리 대상 가스 · 배출 규제 대응</small></div><div class="kpi"><b>18 h · 30 h</b><small>FAB 공정 실습 · 배기가스 처리 교육</small></div></div>
+    <p class="lede">SF₆ 회수·정제 공정 설계와 UniSim 모사, 포토·식각 케미컬 취급, FAB 전후공정 실습으로 가스·케미컬 인프라를 맡을 준비를 했습니다.</p>
+    <div class="kpis"><div class="kpi"><b>1.0 → 54.4 vol%</b><small>SF₆ 농축 — 분리막 1단, 중간보고서 기준</small></div><div class="kpi"><b>GWP 25,200</b><small>처리 대상 가스 · 배출 규제 대응</small></div><div class="kpi"><b>4.94 µm</b><small>TFT 채널 길이 · 설계 대비 오차 1.2 %</small></div></div>
     <div class="idrow"><span><b>서예진</b> (Seo Yejin)</span><span>명지대학교 화학공학과</span><span>고려대학교 ECRD 연구실 학부연구생 (2026.03 – 09)</span><span>지원 분야 · <b>반도체 인프라 · Gas / Chemical / Water 관리</b></span></div>
   </div>
 </section>
 
 <section id="projects">
   <div class="wrap">
-    <div class="sec-head"><h2>프로젝트</h2><span class="num">5 PROJECTS · 문제 정의 → 내가 한 행동 → 결과</span></div>
+    <div class="sec-head"><h2>프로젝트</h2><span class="num">3 PROJECTS · 문제 정의 → 가설 → 데이터 → 결과 → 인사이트</span></div>
     <article class="proj">
   <div class="proj-head"><h3>SF₆ 배기가스 회수·정제 공정 설계</h3><span class="tag">캡스톤 디자인 · 2026 · 팀 5명</span><p class="biz">식각 공정에서 배출되는 SF₆(GWP 25,200)를 재사용 순도까지 농축해 배출 규제 대응과 가스 구매비 절감을 동시에 노리는 공정</p></div>
   <div class="flow"><div class="st"><b>Wet Scrubber</b><span>HF·산성가스 제거</span></div><div class="ar">→</div><div class="st hi"><b>Membrane</b><span>PI hollow-fiber · N₂ 제거</span></div><div class="ar">→</div><div class="st hi"><b>Flash Drum</b><span>20 atm · −20 ℃</span></div><div class="ar">→</div><div class="st hi"><b>Distillation ×2</b><span>C₂F₆ / SF₆ / c-C₄F₈</span></div></div>
-  <div class="cols">
-    <div class="col"><h4><i>1</i>문제 정의</h4><p>저농도(1 vol%) 배기가스에 SF₆와 불소탄화물(CF₄·C₂F₆·c-C₄F₈)이 섞여 있어, 단일 공정으로는 IEC 60480 재사용 순도(>97 vol%)와 회수율을 동시에 만족하지 못함. 팀원 4명이 각자 조사한 물성·파라미터가 서로 충돌해 모사 입력값이 흔들림.</p></div>
-    <div class="col"><h4><i>2</i>내가 한 행동</h4><ul><li>분리막 단계 설계와 전체 공정 데이터 통합 담당 — 팀원별 조사값을 근거자료 ID로 묶어 파라미터 시트를 버전 관리</li><li>응축 압력 15 atm vs 20 atm 비교 → 20 atm 선정, 단일 응축탑을 플래시 드럼 + 증류탑 2기로 재구성</li><li>불소탄화물을 제외하려던 팀 방향을 UniSim 컴포넌트에 포함해 함께 분리하는 쪽으로 제안, 합의 도출</li></ul></div>
-    <div class="col"><h4><i>3</i>결과</h4><div class="big"><div><b>1.0 → 54.4 vol%</b><small>분리막 1단 SF₆ 농축 (중간보고서)</small></div><div><b>> 97 vol%</b><small>IEC 60480 재사용 순도 목표</small></div><div><b>20 atm</b><small>응축 조건 비교 선정</small></div></div></div>
+  <div class="steps">
+    <div class="step"><h4><i>1</i>문제 정의</h4><p>저농도(1 vol%) 배기가스에 SF₆와 불소탄화물(CF₄·C₂F₆·c-C₄F₈)이 섞여 있어 단일 공정으로는 IEC 60480 재사용 순도(>97 vol%)와 회수율을 동시에 만족하지 못함. 팀원 4명이 각자 조사한 물성·파라미터가 충돌해 UniSim 입력값부터 흔들림.</p></div>
+    <div class="step"><h4><i>2</i>가설 설정</h4><ul><li>응축 압력을 높이면 SF₆ 액화 분율이 올라 분리 효율은 좋아지지만 압축 비용이 커진다 → 15 atm과 20 atm을 같은 조건에서 비교하면 답이 나온다</li><li>불소탄화물을 '제외'하지 않고 컴포넌트로 넣어도, 비점 차이를 이용한 플래시 + 증류 2단이면 함께 분리할 수 있다</li></ul></div>
+    <div class="step"><h4><i>3</i>데이터 수집 · 전처리</h4><ul><li>팀원별 조사값(물성, UniSim 파라미터, 환류비, 선행연구 한계)을 한 시트로 모으고 근거자료 ID(R-ID)를 붙여 충돌·오류 교차 검토</li><li>파라미터 시트를 v1.x로 버전 관리, 분리막 조건은 45 ℃ · 6 bar · 120 m² 기준으로 재계산해 중간보고서 값과 비교</li><li>중간보고서의 '97 %'가 회수율 목표가 아니라 IEC 60480 순도 규격임을 확인해 지표 정의부터 정정</li></ul></div>
+    <div class="step res"><h4><i>4</i>결과</h4><div class="big"><div><b>1.0 → 54.4 vol%</b><small>분리막 1단 SF₆ 농축 (중간보고서)</small></div><div><b>20 atm</b><small>응축 압력 비교 후 선정</small></div><div><b>2 columns</b><small>C₂F₆ / SF₆ / c-C₄F₈ 분리 구성</small></div></div></div>
   </div>
   <div class="ba">
   <div class="bx before"><h5>Before</h5><b>응축탑 1기 · 불소탄화물 제외</b><p>SF₆ 외 성분 분리 불가, 재사용 순도 보장 어려움</p></div>
   <div class="mid">→</div>
   <div class="bx after"><h5>After</h5><b>플래시 드럼 + 증류탑 2기</b><p>CF₄·C₂F₆·c-C₄F₈까지 분리 — 순도 규격 충족 경로 확보</p></div>
 </div>
+  <div class="insight"><span>Insight</span><p>수치마다 출처 ID를 붙이고 나서야 팀의 논의가 '누구 값이 맞나'에서 '어느 조건을 고를까'로 바뀌었다. 데이터 통합은 설계 판단의 전제 조건이지 사후 정리가 아니다.</p></div>
 </article><article class="proj">
-  <div class="proj-head"><h3>TFT Photolithography · 습식 식각 실습</h3><span class="tag">화학공학실험2 · 2026.04 – 05</span><p class="biz">ITO 기판 위 TFT 전극 패턴 형성 — 포토·식각 케미컬(PR, TMAH 현상액, HCl 식각액)을 직접 다루고 공정 변수와 불량의 관계를 확인</p></div>
+  <div class="proj-head"><h3>TFT Photolithography · 습식 식각 불량 원인 분석</h3><span class="tag">화학공학실험2 · 2026.04 – 05</span><p class="biz">ITO 기판 위 TFT 전극 패턴 형성 — PR·TMAH 현상액·HCl 식각액을 직접 다루고, 공정 변수가 불량으로 이어지는 경로를 확인</p></div>
   <div class="flow"><div class="st"><b>Spin coating</b><span>4000 rpm · PR AZ GXR601</span></div><div class="ar">→</div><div class="st hi"><b>Exposure</b><span>60 – 100 s · Gap 8.7 – 17.5</span></div><div class="ar">→</div><div class="st"><b>Develop</b><span>AZ 300MIF (TMAH)</span></div><div class="ar">→</div><div class="st hi"><b>Wet etch</b><span>HCl · ITO</span></div><div class="ar">→</div><div class="st"><b>Inspect</b><span>광학현미경 · 도통 테스트</span></div></div>
-  <div class="cols">
-    <div class="col"><h4><i>1</i>문제 정의</h4><p>학생 4개 조(노광 60 / 70 / 90 / 100 s, Gap 8.7 – 15) 모두 패턴 형성 실패. 조건은 조교가 변수 비교용으로 배정 — 왜 실패했는지 공정 변수로 설명해야 함.</p></div>
-    <div class="col"><h4><i>2</i>내가 한 행동</h4><ul><li>조별 결과를 노광량(under / over exposure)과 Gap 부족에 따른 회절·간섭으로 분류해 실패 원인 매핑</li><li>기준 시편(노광 90 s · Gap 17.53)으로 채널 길이·폭 측정, 등방성 식각에 의한 undercut으로 설계값과의 차이 설명</li><li>식각 후 도통 테스트로 ITO 선택 제거 확인</li></ul></div>
-    <div class="col"><h4><i>3</i>결과</h4><div class="big"><div><b>4.94 µm</b><small>채널 길이 (설계 5 µm · 오차 1.2 %)</small></div><div><b>W/L 10.38</b><small>설계 10 · 측면 식각 영향</small></div><div><b>4 / 4 조</b><small>실패 원인 공정 변수로 분류</small></div></div></div>
+  <div class="steps">
+    <div class="step"><h4><i>1</i>문제 정의</h4><p>학생 4개 조(노광 60 / 70 / 90 / 100 s, Gap 8.7 – 15) 모두 패턴 형성 실패. 조건은 조교가 변수 비교용으로 배정 — '왜 실패했는가'를 공정 변수로 설명해야 함.</p></div>
+    <div class="step"><h4><i>2</i>가설 설정</h4><ul><li>노광 시간이 짧으면 PR이 충분히 반응하지 않아 현상 시 전체가 남고(under), 길면 패턴 경계가 뭉개진다(over)</li><li>마스크–기판 Gap이 작을수록 회절·간섭으로 광 균일도가 떨어져 노광 시간이 맞아도 패턴이 깨진다</li></ul></div>
+    <div class="step"><h4><i>3</i>데이터 수집 · 전처리</h4><ul><li>조별 조건(rpm · 노광 시간 · Gap)과 현상·식각 후 현미경 이미지를 한 표로 정리, 실패 유형을 under / over exposure · Gap 부족으로 분류</li><li>기준 시편(노광 90 s · Gap 17.53)으로 채널 길이(x₂ − x₁)·폭 측정, 설계값과 비교</li><li>식각 후 멀티미터 도통 테스트로 잔존 ITO(도통) / 제거 영역(비도통) 확인</li></ul></div>
+    <div class="step res"><h4><i>4</i>결과</h4><div class="big"><div><b>4.94 µm</b><small>채널 길이 (설계 5 µm · 오차 1.2 %)</small></div><div><b>W/L 10.38</b><small>설계 10 · 등방성 식각 undercut</small></div><div><b>4 / 4 조</b><small>실패 원인을 공정 변수로 분류</small></div></div></div>
   </div>
   <div class="ba">
   <div class="bx before"><h5>Before</h5><b>노광 60 s · Gap 15</b><p>패턴 미형성 (노광량 부족 + 회절)</p></div>
   <div class="mid">→</div>
-  <div class="bx after"><h5>After</h5><b>노광 90 s · Gap 17.53</b><p>채널 4.94 µm 형성 · 도통/비도통 정상</p></div>
+  <div class="bx after"><h5>After</h5><b>노광 90 s · Gap 17.53</b><p>채널 4.94 µm 형성 · 도통 / 비도통 정상</p></div>
 </div>
+  <div class="insight"><span>Insight</span><p>같은 레시피라도 Gap 2 mm 차이로 결과가 갈렸다. 조건 하나만 바꿔 비교하는 실험 설계가 있어야 불량 원인을 '추정'이 아니라 '분류'할 수 있다.</p></div>
 </article><article class="proj">
-  <div class="proj-head"><h3>LTA 제올라이트 분리막 소재 연구</h3><span class="tag">고려대 ECRD 연구실 · 2026.03 – 09</span><p class="biz">가스 분리막 소재의 실험 설계·분석 경험 — 분리막 공정의 소재 쪽 이해</p></div>
+  <div class="proj-head"><h3>LTA 제올라이트 분리막 — 이온교환 조건 설계</h3><span class="tag">고려대 ECRD 연구실 · 2026.03 – 09</span><p class="biz">가스 분리막 소재 쪽에서 본 분리 공정 — 이온교환 조건 설계와 분석을 맡은 6개월</p></div>
   
-  <div class="cols">
-    <div class="col"><h4><i>1</i>문제 정의</h4><p>NaA 제올라이트의 Na⁺를 Li⁺·K⁺로 치환할 때 교환율에 따라 기공 크기와 선택도가 달라짐. 목표 교환율을 재현성 있게 맞추는 조건표와 분석 체계가 필요.</p></div>
-    <div class="col"><h4><i>2</i>내가 한 행동</h4><ul><li>NaA 1 g 기준 목표 교환율 50 % 조건 + 과량(≥100 %) 조건을 함께 설계, 양이온 농도·pH·온도·교반 시간을 변수로 정리한 수식 연동 계산 시트 제작</li><li>라만 분광 직접 측정, SEM·EDS 결과 해석, HPLC·GC 분석 교육 이수</li><li>제올라이트·촉매 문헌 조사 및 정기 세미나 발표(J. Catal. 2014 · 2016), 논문 전문 번역으로 용어 체계 정리</li></ul></div>
-    <div class="col"><h4><i>3</i>결과</h4><div class="big"><div><b>50 % / ≥100 %</b><small>이온교환 조건 2종 설계</small></div><div><b>4 변수</b><small>농도 · pH · 온도 · 교반시간 통제</small></div><div><b>Raman · SEM/EDS</b><small>특성 분석</small></div></div></div>
+  <div class="steps">
+    <div class="step"><h4><i>1</i>문제 정의</h4><p>NaA 제올라이트의 Na⁺를 Li⁺·K⁺로 치환하면 교환율에 따라 기공 크기와 선택도가 달라짐. 목표 교환율을 재현성 있게 맞출 조건표와 결과를 확인할 분석 체계가 없는 상태에서 출발.</p></div>
+    <div class="step"><h4><i>2</i>가설 설정</h4><ul><li>양이온 종류(Li⁺ / K⁺)와 교환율로 유효 기공 크기를 조절하면 NH₃ 분자 크기에 맞춘 선택 투과가 가능하다</li><li>목표 50 % 조건과 과량(≥100 %) 조건을 함께 두면 교환 평형의 상한을 같이 확인할 수 있다</li></ul></div>
+    <div class="step"><h4><i>3</i>데이터 수집 · 전처리</h4><ul><li>NaA 1 g 기준으로 양이온 농도 · pH · 온도 · 교반 시간을 변수로 한 이온교환 조건표 설계, 수식 연동 계산 시트로 투입량 자동 산출</li><li>라만 분광 직접 측정, SEM·EDS 결과 해석으로 조성·형상 변화 확인</li><li>제올라이트·촉매 문헌 조사 후 정기 세미나 발표(J. Catal. 2014 · 2016 등), 논문 전문 번역으로 분야 용어 체계 정리</li></ul></div>
+    <div class="step res"><h4><i>4</i>결과</h4><div class="big"><div><b>50 % / ≥100 %</b><small>이온교환 조건 2종 설계</small></div><div><b>4 변수</b><small>농도 · pH · 온도 · 교반시간 통제</small></div><div><b>Raman · SEM/EDS</b><small>특성 분석</small></div></div></div>
   </div>
   
-</article><article class="proj">
-  <div class="proj-head"><h3>Xylene 공정 설계 · 경제성 평가</h3><span class="tag">공정설계 · 화학공학개론</span><p class="biz">물질수지 → 장치 사이징 → 경제성까지 — 설비 투자 판단에 필요한 수지·비용 감각</p></div>
-  <div class="flow"><div class="st hi"><b>물질수지</b><span>Feed 1,000,000 kg/day</span></div><div class="ar">→</div><div class="st hi"><b>장치 사이징</b><span>펌프 · 열교환기 2기</span></div><div class="ar">→</div><div class="st hi"><b>CAPEX</b><span>장치비 기반</span></div><div class="ar">→</div><div class="st hi"><b>ROI</b><span>투자 회수율</span></div></div>
-  <div class="cols">
-    <div class="col"><h4><i>1</i>문제 정의</h4><p>PFD 한 장에서 출발해 장치 사양과 투자비, 수익성까지 숫자가 서로 맞물리게 산출해야 함. 중간 단계 하나라도 어긋나면 ROI가 의미를 잃음.</p></div>
-    <div class="col"><h4><i>2</i>내가 한 행동</h4><ul><li>물질수지로 총 유량 91,860 lbm/hr 확정, 이를 기준으로 펌프 동력(효율 85 %)과 열교환기 전열 면적 산출</li><li>장치 사양을 장치비로 환산해 CAPEX 추산, ROI로 경제적 타당성 판단</li><li>수지 → 사이징 → 비용 순으로 단계 간 수치 일관성 전 과정 검토</li></ul></div>
-    <div class="col"><h4><i>3</i>결과</h4><div class="big"><div><b>$40.11 M</b><small>CAPEX</small></div><div><b>14 %</b><small>ROI</small></div><div><b>21.53 kW · 2,859 ft²</b><small>펌프 동력 · 열교환 면적 합계</small></div></div></div>
-  </div>
-  
-</article><article class="proj">
-  <div class="proj-head"><h3>PCM 보냉 시스템 열설계</h3><span class="tag">열설계 · 최적화</span><p class="biz">온도 조건을 열저항 모델로 보장하는 설계 — 저장·이송 설비의 열 관리 감각</p></div>
-  
-  <div class="cols">
-    <div class="col"><h4><i>1</i>문제 정의</h4><p>목표 온도·시간을 만족하면서 PCM 질량과 부피를 최소화해야 함. 후보 소재 3종 중 무엇을, 얼마나 넣을지 근거가 필요.</p></div>
-    <div class="col"><h4><i>2</i>내가 한 행동</h4><ul><li>전도+대류 열저항 모델로 총 열저항 산정, 2시간 유지에 필요한 PCM 잠열량과 질량을 역산</li><li>E-15 / E-19 / E-21 후보를 상변화 온도·용량 기준으로 비교해 E-21 선정, 부피·질량 사양 확정</li></ul></div>
-    <div class="col"><h4><i>3</i>결과</h4><div class="big"><div><b>6.508 K/W</b><small>총 열저항 R<sub>total</sub></small></div><div><b>163 g · 132 cm³</b><small>선정 PCM(E-21) 사양</small></div><div><b>−18 ℃ · 2 h</b><small>목표 조건 충족</small></div></div></div>
-  </div>
-  <div class="ba">
-  <div class="bx before"><h5>Before</h5><b>후보 PCM 3종 · 소요량 미정</b><p>E-15 / E-19 / E-21</p></div>
-  <div class="mid">→</div>
-  <div class="bx after"><h5>After</h5><b>E-21 · 163 g</b><p>열저항 모델로 역산한 최소 소요량</p></div>
-</div>
+  <div class="insight"><span>Insight</span><p>소재 연구는 '합성'보다 '조건표'에서 결정된다. 변수를 먼저 고정하고 계산 시트로 투입량을 묶어두니 실험 간 비교가 처음으로 가능해졌다.</p></div>
 </article>
   </div>
 </section>
@@ -99,8 +83,8 @@
 
 <section id="timeline">
   <div class="wrap">
-    <div class="sec-head"><h2>교육 · 활동</h2><span class="num">2022 – 2026</span></div>
-    <ul class="tl"><li><span class="d">2026.10</span><div class="t"><b>명지대 VIBE CODING 경진대회 본선 · Team MCP</b><br><span>청년정책 자격 판정 AI 서비스 '청년서랍' 개발 담당</span></div><span class="c">AI · 개발</span></li><li><span class="d">2026.07</span><div class="t"><b>GMP 기초이론 교육 수료 · 이매스교육센터</b><br><span>의약품·화장품 제조 및 품질관리 기준 · 12 h</span></div><span class="c">품질</span></li><li><span class="d">2026.07</span><div class="t"><b>해양수산 창업 공모전 · 해담 팀</b><br><span>키틴 기반 미세플라스틱 포집 카트리지 — 구조 설계·유체 흐름 분석</span></div><span class="c">설계</span></li><li><span class="d">2026.06</span><div class="t"><b>명지대 장애인식개선 공모전 · 동상</b><br><span>배리어프리 화학 실험실 제안 (개인 참가)</span></div><span class="c">수상</span></li><li><span class="d">2026.03 – 09</span><div class="t"><b>고려대학교 ECRD 연구실 학부연구생</b><br><span>LTA 제올라이트 분리막 연구 · 정기 세미나 발표</span></div><span class="c">연구</span></li><li><span class="d">2026.05</span><div class="t"><b>이차전지 코인셀 제조 · 충방전 평가</b><br><span>NCM622/Graphite · 용량 유지율 · 0.5 / 1 / 5 C rate</span></div><span class="c">실험</span></li><li><span class="d">2025.09</span><div class="t"><b>반도체 산업 전문인력 양성 교육 4기 · 용인시산업진흥원</b><br><span>8대 공정 이론 · 전후공정 실습 · 300 mm 장비 고장진단 · 18 h</span></div><span class="c">반도체</span></li><li><span class="d">2025.07</span><div class="t"><b>수도권 미세먼지연구·관리센터 하계학부연구생 교육 · 인하대</b><br><span>대기오염 방지설비 · 제어 기술 · 배출원 측정 · 온실가스 관리 · 30 h</span></div><span class="c">환경</span></li><li><span class="d">2022.09 – 12</span><div class="t"><b>흡연구역 연기 확산 방지 부스 설계 · 공학입문설계</b><br><span>팀장</span></div><span class="c">설계</span></li></ul>
+    <div class="sec-head"><h2>교육 · 활동</h2><span class="num">강조 카드 = 직무 밖에서도 나를 설명하는 경험</span></div>
+    <ul class="tl"><li class="feat"><span class="d">2026.10</span><div class="t"><b>명지대 VIBE CODING 경진대회 본선 · Team MCP</b><p>청년정책 자격 판정·중복수혜 조합 AI 서비스 '청년서랍' — 개발 담당. Claude Code로 설계·구현</p><p class="why"><em>왜 중요한가</em>AI 도구를 '써봤다'가 아니라 서비스로 완성해 본선까지 간 경험 — 직무 공통 요구인 AI 활용 역량의 증거</p></div><span class="c">AI 활용</span></li><li class="feat"><span class="d">2026.03 – 09</span><div class="t"><b>고려대학교 ECRD 연구실 학부연구생</b><p>LTA 제올라이트 분리막 — 이온교환 조건 설계, 라만 측정, 정기 세미나 발표, 논문 전문 번역</p><p class="why"><em>왜 중요한가</em>타교 연구실에 직접 찾아가 6개월간 소재 연구를 경험 — 문헌 → 조건 설계 → 분석까지 연구 사이클을 몸으로 익힘</p></div><span class="c">연구</span></li><li class="feat"><span class="d">2026.04 – 06</span><div class="t"><b>장애학생 대필도우미 → 배리어프리 화학 실험실 제안 · 동상</b><p>연구자를 꿈꾸는 화학과 학우의 대필을 돕다 장애 학습권에 관심 → 높이 조절 실험대 · IoT 다감각 안전망 · AI 비전 보조 3안을 개인 제안서로 작성, 접근성 기준 교차 검증</p><p class="why"><em>왜 중요한가</em>문제를 발견한 사람이 직접 해결안을 설계한 경험 — 요청받지 않은 일을 제안으로 바꾼 자발성</p></div><span class="c">수상 · 개인</span></li><li><span class="d">2026.07</span><div class="t"><b>GMP 기초이론 교육 수료 · 이매스교육센터</b><br><span>의약품·화장품 제조 및 품질관리 기준 · 12 h</span></div><span class="c">품질</span></li><li><span class="d">2026.07</span><div class="t"><b>해양수산 창업 공모전 · 해담 팀</b><br><span>키틴 기반 미세플라스틱 포집 카트리지 — 구조 설계·유체 흐름 분석 담당</span></div><span class="c">설계</span></li><li class="feat"><span class="d">2025.07</span><div class="t"><b>태국 해외봉사 · 문화교류 공연 팀장</b><p>한센인 병원 도시락 나눔·외벽 도색·시설 보수, 어린이센터 공연. 공연팀 10명: 폭염 속 체력 갈등을 '안무 모듈화'와 '연습 영상 즉시 공유'로 풀어 전원 무대 완료, 활동 책자 직접 제작</p><p class="why"><em>왜 중요한가</em>완성도보다 '한 명도 빠지지 않는 것'을 목표로 합의하고 지켜낸 팀 운영 — 갈등을 구조(일정·피드백)로 푼 경험</p></div><span class="c">리더십</span></li><li><span class="d">2025.09</span><div class="t"><b>반도체 산업 전문인력 양성 교육 4기 · 용인시산업진흥원</b><br><span>8대 공정 이론 · 전후공정 실습 · 300 mm 장비 고장진단 · 18 h</span></div><span class="c">반도체</span></li><li><span class="d">2025.07</span><div class="t"><b>수도권 미세먼지연구·관리센터 하계학부연구생 교육 · 인하대</b><br><span>대기오염 방지설비 · 제어 기술 · 배출원 측정 · 온실가스 관리 · 30 h</span></div><span class="c">환경</span></li><li><span class="d">2025.03 – 12</span><div class="t"><b>EBS 화상튜터링 멘토 · 13회</b><br><span>온라인 1:1 학습 멘토링</span></div><span class="c">멘토링</span></li><li class="feat"><span class="d">2023.12 – 2024.01</span><div class="t"><b>호주·뉴질랜드 문화탐방 15일 · 명지대 동계 오세아니아 탐방</b><p>낙농 온실가스 현장 — 사료 조절로 메탄을 줄이는 접근을 보고 '기체를 다루는 공학'에 관심. 이후 미세먼지센터 교육 → SF₆ 배기가스 캡스톤으로 이어진 출발점</p><p class="why"><em>왜 중요한가</em>지금의 직무 방향(가스·배기 처리)이 어디서 시작됐는지 보여주는 경험 — 관심이 교육과 설계 프로젝트로 연결된 일관성</p></div><span class="c">출발점</span></li><li><span class="d">2022.09 – 12</span><div class="t"><b>흡연구역 연기 확산 방지 부스 설계 · 공학입문설계 팀장</b></div><span class="c">설계</span></li></ul>
   </div>
 </section>
 
